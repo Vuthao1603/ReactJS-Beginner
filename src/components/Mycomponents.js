@@ -1,5 +1,5 @@
 import React from "react";
-import Userinfor from "./Userinfor";
+import AddUserinfor from "./AddUserinfor";
 import Displayinfor from "./Displayinfor";
 class Mycomponents extends React.Component {
   //khai bao state
@@ -10,6 +10,13 @@ class Mycomponents extends React.Component {
       { id: 2, name: "thao1", age: 26 },
       { id: 3, name: "thao2", age: 27 },
     ],
+  };
+
+  handleAddNewUser = (userObj) => {
+    console.log("check data", userObj);
+    this.setState({
+      listUser: [userObj, ...this.state.listUser],
+    });
   };
 
   handleclick = (events) => {
@@ -60,7 +67,7 @@ class Mycomponents extends React.Component {
           />
           <button> submit </button>
         </form>
-        <Userinfor />
+        <AddUserinfor handleAddNewUser={this.handleAddNewUser} />
         <Displayinfor listUser={this.state.listUser} />
       </div>
     );

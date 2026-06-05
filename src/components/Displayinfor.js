@@ -1,6 +1,5 @@
 import React from "react";
-import Mycomponents from "./Mycomponents";
-import Userinfor from "./Userinfor";
+
 class Displayinfor extends React.Component {
   state = {
     isShowlistuser: true,
