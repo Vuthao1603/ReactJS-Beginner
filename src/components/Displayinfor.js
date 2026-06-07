@@ -1,4 +1,5 @@
 import React from "react";
+import "./displayinfor.scss";
 
 class Displayinfor extends React.Component {
   state = {
@@ -20,7 +21,7 @@ class Displayinfor extends React.Component {
       <div>
         {listUser.map((user) => {
           return (
-            <div>
+            <div className="display-infor-container">
               <div>
                 <span
                   onClick={() => {
